@@ -1,0 +1,26 @@
+- hosts: oel75
+  tasks:
+      - name: db19c_create | validate CDB
+        remote_user: "{{ root_user }}"
+        become: yes
+        become_user: "{{ oracle_user }}"
+        when: inventory_hostname in groups['oel75']
+        shell: export ORACLE_HOME={{ oracle_home }}; export ORACLE_SID={{ cdb_name }}; export PATH=$PATH:$ORACLE_HOME/bin; echo "{{ item }};" | {{ oracle_home }}/bin/sqlplus / as sysdba
+        register: sqlplus_cdbvalidate
+        failed_when: "'ERROR' in sqlplus_cdbvalidate.stdout or sqlplus_cdbvalidate.rc != 0"
+        with_items:
+            - select name,open_mode, cdb from v\$database
+            - SELECT * FROM nls_database_parameters WHERE  parameter = 'NLS_CHARACTERSET'
+            - show pdbs
+
+      - name: display CDB validation output message
+        when: inventory_hostname in groups['oel75']
+        debug:
+            var=sqlplus_cdbvalidate.results
+  vars:
+    cdb_name: "ORCLCDB"
+    pdb_name: ORCLPDB1
+    syspass: "Bangla123"
+    oracle_home: "/opt/oracle/product/19c/dbhome_1"
+    root_user: root
+    oracle_user: oracle
