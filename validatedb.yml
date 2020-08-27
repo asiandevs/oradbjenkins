@@ -9,14 +9,14 @@
         register: sqlplus_cdbvalidate
         failed_when: "'ERROR' in sqlplus_cdbvalidate.stdout or sqlplus_cdbvalidate.rc != 0"
         with_items:
-            - select name,open_mode, cdb from v\$database
+            - select name, open_mode, cdb, database_role from v\$database
             - SELECT * FROM nls_database_parameters WHERE  parameter = 'NLS_CHARACTERSET'
             - show pdbs
 
-      - name: display CDB validation output message
-        when: inventory_hostname in groups['oel75']
-        debug:
-            var=sqlplus_cdbvalidate.results
+      - name: display details of sb sql output
+        debug: msg="{{ item }}"
+        with_items: "{{ sqlplus_cdbvalidate.results|map(attribute='stdout')|list }}"
+
   vars:
     cdb_name: "ORCLCDB"
     pdb_name: ORCLPDB1
@@ -24,3 +24,4 @@
     oracle_home: "/opt/oracle/product/19c/dbhome_1"
     root_user: root
     oracle_user: oracle
+
