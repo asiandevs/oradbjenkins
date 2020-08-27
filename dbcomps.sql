@@ -1,3 +1,5 @@
+set pagesize 0
+set heading on
 col comp_id format a10
 col comp_name format a30
 col version format a10
