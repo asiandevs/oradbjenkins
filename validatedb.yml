@@ -10,7 +10,6 @@
         failed_when: "'ERROR' in sqlplus_cdbvalidate.stdout or sqlplus_cdbvalidate.rc != 0"
         with_items:
             - select name, open_mode, cdb, database_role from v\$database
-            - SELECT * FROM nls_database_parameters WHERE  parameter = 'NLS_CHARACTERSET'
             - show pdbs
 
       - name: display details of sb sql output
