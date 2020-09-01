@@ -24,25 +24,11 @@ Project              | tasks
    c.                | # **ValidateComponents**
 4 dbversionchk       | # **dbversionchk**
 
- ### 01_createOracleDB
-![img](https://cdn-images-1.medium.com/max/1200/1*isEslZbkU1yMxHAR0oSnTA.png)
- ### 02_add_pdb_tns
-![img](https://cdn-images-1.medium.com/max/800/1*uhGQTZyXWqDpaViHC9O17A.png)
- ### 03
-  ####a_ModifyPassword
-  ####b_ModifyLogmode
-  ####c_ValidateComponents
-  ![img](https://cdn-images-1.medium.com/max/800/1*WAnavGlaTG6JkdUMECOzgw.png)
-  
-  ### 04_dbversionchk
-  ![img](https://cdn-images-1.medium.com/max/800/1*C05DJrQVUKgOAWk8WlMxsQ.png)
-  
 ## 3. Configure
 ### Source Code Management > Repository URL
 ```
 https://github.com/asiandevs/oradbjenkins.git
 ```
-![img](https://cdn-images-1.medium.com/max/800/1*rT-ioBCcDtuLV6NAjBkttw.png)
 
 ### Build Output
 
