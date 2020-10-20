@@ -27,7 +27,7 @@ pipeline {
         }
            stage ('Create Database') {
             steps { 
-                echo 'Creating Oracle Oracle'
+                echo 'Creating Oracle Database'
                 sh script: "sudo su - root bash -c '/etc/init.d/oracledb_ORCLCDB-19c configure'"
             }
         }
