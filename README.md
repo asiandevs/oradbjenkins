@@ -3,6 +3,14 @@
 # Oracle RDBMS software Installation and Create Oracle Database
 ![img](https://cdn-images-1.medium.com/max/800/1*nYjITJd5Hjm1A0WEq24WBw.png)
 
+## Download Oracle RDBMS software 
+Download the .rpm file required for performing an RPM-based installation to a directory of your choice. For example, here we downloaded the oracle-database-ee-19c-1.0-1.x86_64.rpm file to the /u01/stage directory.
+
+### software download page
+```
+http://www.oracle.com/technetwork/indexes/downloads/index.html
+```
+
 ## 1. Required Execution Plugin
 
 * `Role-based Authorization Strategy (for creating users and role)`
