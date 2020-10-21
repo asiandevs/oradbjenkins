@@ -1,6 +1,6 @@
 # oradbjenkins
 
-# Oracle RDBMS software Installation and Create Oracle Database
+# Deployment of Oracle RDBMS software Installation and Create Oracle Database using Jenkins
 ![img](https://cdn-images-1.medium.com/max/800/1*nYjITJd5Hjm1A0WEq24WBw.png)
 
 ## Download Oracle RDBMS software 
