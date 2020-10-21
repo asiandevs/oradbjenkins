@@ -1,7 +1,7 @@
 # oradbjenkins
 
 # Oracle RDBMS software Installation and Create Oracle Database
-![img](https://cdn-images-1.medium.com/max/800/1*sGSrL7Qclels0xI9Z9lsyQ.png)
+![img](https://cdn-images-1.medium.com/max/800/1*nYjITJd5Hjm1A0WEq24WBw.png)
 
 ## 1. Required Execution Plugin
 
